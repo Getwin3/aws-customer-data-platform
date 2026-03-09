@@ -1,0 +1,13 @@
+sources:
+
+  crm:
+    format: parquet
+    path: s3://datalake/crm
+
+  web:
+    format: parquet
+    path: s3://datalake/web
+
+  transactions:
+    format: parquet
+    path: s3://datalake/transactions

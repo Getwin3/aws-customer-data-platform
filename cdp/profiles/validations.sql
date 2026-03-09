@@ -1,0 +1,1 @@
+SELECT COUNT(*) FROM profiles WHERE customer_id IS NULL

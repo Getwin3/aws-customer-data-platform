@@ -1,0 +1,7 @@
+s3_paths:
+
+  raw: s3://datalake/raw
+  staging: s3://cdp/staging
+  profiles: s3://cdp/profiles
+  dedupe: s3://cdp/dedupe
+  ucp: s3://cdp/ucp

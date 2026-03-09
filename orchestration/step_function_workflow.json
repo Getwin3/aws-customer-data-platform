@@ -1,0 +1,26 @@
+{
+  "Comment": "Customer Data Platform Pipeline",
+  "StartAt": "Sensor",
+  "States": {
+    "Sensor": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:sensor_lambda",
+      "Next": "ProfileBuilder"
+    },
+    "ProfileBuilder": {
+      "Type": "Task",
+      "Resource": "arn:aws:glue:profile_job",
+      "Next": "Deduplication"
+    },
+    "Deduplication": {
+      "Type": "Task",
+      "Resource": "arn:aws:glue:dedupe_job",
+      "Next": "UCP"
+    },
+    "UCP": {
+      "Type": "Task",
+      "Resource": "arn:aws:glue:ucp_job",
+      "End": true
+    }
+  }
+}
